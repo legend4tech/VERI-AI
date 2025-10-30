@@ -1,18 +1,24 @@
-import { FeaturesSection } from "~~/components/veri-ai/features-section";
-import { Footer } from "~~/components/veri-ai/footer";
-import { Header } from "~~/components/veri-ai/header";
-import { HeroSection } from "~~/components/veri-ai/hero-section";
+import { BuiltForNigeria } from "~~/components/landing/built-for-nigeria";
+import { CTA } from "~~/components/landing/cta";
+import { Features } from "~~/components/landing/features";
+import { Footer } from "~~/components/landing/footer";
+import { Header } from "~~/components/landing/header";
+import { Hero } from "~~/components/landing/hero";
+import { Listings } from "~~/components/landing/listings";
+import { Process } from "~~/components/landing/process";
 
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-background">
+    <main className="min-h-screen bg-white">
       <Header />
-      <main>
-        <HeroSection />
-        <FeaturesSection />
-      </main>
+      <Hero/>
+      <Features />
+      <Listings />
+      <BuiltForNigeria />
+      <Process />
+      <CTA />
       <Footer />
-    </div>
+    </main>
   )
 }
