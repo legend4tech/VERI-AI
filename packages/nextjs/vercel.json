@@ -1,3 +1,5 @@
+
 {
-  "installCommand": "yarn install"
+  "buildCommand": "pnpm build",
+  "installCommand": "pnpm install"
 }
