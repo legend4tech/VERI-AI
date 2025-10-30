@@ -1,15 +1,10 @@
-# 🔍 VERI-AI
+# ReAi
 
-**VERI-AI** is a **Web3-powered verification platform** built on **StarkNet**.  
-It helps users verify the authenticity and ownership of **digital and physical assets** (like certificates, land documents, or NFTs) using blockchain transparency and AI validation.
-
-Our mission is to make **trust verification simple, secure, and tamper-proof**.
-
----
+**ReAiI**  is a decentralized real estate platform built on Starknet that enables seamless property tokenization. It allows users to invest in real estate by purchasing tokens representing fractional ownership. With an AI Oracle that verifies property authenticity and prevents fraud, plus escrow payments and account abstraction wallets for secure transactions, ReAI ensures transparency, trust, and accessibility—making real estate investment simple, secure, and open to everyone.
 
 ## ⚙️ Built With
 
-VERI-AI is built using the **Scaffold-Stark** framework — an open-source toolkit for rapidly building and deploying decentralized applications on **StarkNet**.
+ReAiAI is built using the **Scaffold-Stark** framework — an open-source toolkit for rapidly building and deploying decentralized applications on **StarkNet**.
 
 ### Core Technologies
 - **Next.js** – frontend and app routing
