@@ -1,22 +1,31 @@
 "use client"
 
 import { useState } from "react"
-import { Card } from "../ui/card"
-import { Badge } from "../ui/badge"
-import { Button } from "../ui/button"
-import { Progress } from "../ui/progress"
-import { Input } from "../ui/input"
+import { Card } from "~~/components/ui/card"
+import { Badge } from "~~/components/ui/badge"
+import { Button } from "~~/components/ui/button"
+import { Progress } from "~~/components/ui/progress"
+import { Input } from "~~/components/ui/input"
 import { MapPin, TrendingUp, Search } from "lucide-react"
-import { properties } from "~~/data/properties-data"
+import { properties, Property } from "~~/data/properties-data"
+import { PropertyAnalysisModal } from "./property-analysis-modal"
+
 
 export function PropertiesList() {
   const [searchQuery, setSearchQuery] = useState("")
+  const [selectedProperty, setSelectedProperty] = useState<Property | null>(null)
+  const [isAnalysisOpen, setIsAnalysisOpen] = useState(false)
 
   const filteredProperties = properties.filter(
     (property) =>
       property.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       property.location.toLowerCase().includes(searchQuery.toLowerCase()),
   )
+
+  const handleAnalyze = (property: Property) => {
+    setSelectedProperty(property)
+    setIsAnalysisOpen(true)
+  }
 
   return (
     <>
@@ -107,16 +116,26 @@ export function PropertiesList() {
                   {/* Progress Bar */}
                   <Progress value={property.funded} className="mb-6 h-2" />
 
-                  {/* Invest Button */}
-                  <Button className="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-6">
-                    Invest Now
-                  </Button>
+                  <div className="grid grid-cols-2 gap-3">
+                    <Button
+                      onClick={() => handleAnalyze(property)}
+                      variant="outline"
+                      className="border-emerald-600 text-emerald-600 hover:bg-emerald-50 font-semibold py-6"
+                    >
+                      Analyse
+                    </Button>
+                    <Button className="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-6">
+                      Invest Now
+                    </Button>
+                  </div>
                 </div>
               </Card>
             ))}
           </div>
         </>
       )}
+
+      <PropertyAnalysisModal property={selectedProperty} open={isAnalysisOpen} onOpenChange={setIsAnalysisOpen} />
     </>
   )
 }
