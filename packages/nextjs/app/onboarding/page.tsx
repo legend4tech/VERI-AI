@@ -3,8 +3,8 @@ import Link from "next/link"
 import { Users, Building2, CheckCircle2, Briefcase, Building } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Choose Your Path | BrickChain",
-  description: "Select how you'd like to join the BrickChain ecosystem",
+  title: "Choose Your Path | reAI",
+  description: "Select how you'd like to join the reAI ecosystem",
 }
 
 export default function OnboardingPage() {
@@ -14,7 +14,7 @@ export default function OnboardingPage() {
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-900 mb-3">Choose Your Path</h1>
-          <p className="text-lg text-gray-600">Select how you'd like to join the BrickChain ecosystem</p>
+          <p className="text-lg text-gray-600">Select how you'd like to join the reAI ecosystem</p>
         </div>
 
         {/* Cards */}
@@ -50,15 +50,15 @@ export default function OnboardingPage() {
             {/* Features */}
             <div className="space-y-3">
               <div className="flex items-center gap-3">
-                <CheckCircle2 className="w-5 h-5 text-emerald-500 shrink-0" />
+                <CheckCircle2 className="w-5 h-5 text-emerald-500 flex-shrink-0" />
                 <span className="text-gray-700">Low minimum investment</span>
               </div>
               <div className="flex items-center gap-3">
-                <CheckCircle2 className="w-5 h-5 text-emerald-500 shrink-0" />
+                <CheckCircle2 className="w-5 h-5 text-emerald-500 flex-shrink-0" />
                 <span className="text-gray-700">Instant liquidity</span>
               </div>
               <div className="flex items-center gap-3">
-                <CheckCircle2 className="w-5 h-5 text-emerald-500 shrink-0" />
+                <CheckCircle2 className="w-5 h-5 text-emerald-500 flex-shrink-0" />
                 <span className="text-gray-700">Passive income</span>
               </div>
             </div>
@@ -95,15 +95,15 @@ export default function OnboardingPage() {
             {/* Features */}
             <div className="space-y-3">
               <div className="flex items-center gap-3">
-                <CheckCircle2 className="w-5 h-5 text-blue-500 shrink-0" />
+                <CheckCircle2 className="w-5 h-5 text-blue-500 flex-shrink-0" />
                 <span className="text-gray-700">List properties</span>
               </div>
               <div className="flex items-center gap-3">
-                <CheckCircle2 className="w-5 h-5 text-blue-500 shrink-0" />
+                <CheckCircle2 className="w-5 h-5 text-blue-500 flex-shrink-0" />
                 <span className="text-gray-700">Earn commissions</span>
               </div>
               <div className="flex items-center gap-3">
-                <CheckCircle2 className="w-5 h-5 text-blue-500 shrink-0" />
+                <CheckCircle2 className="w-5 h-5 text-blue-500 flex-shrink-0" />
                 <span className="text-gray-700">Manage listings</span>
               </div>
             </div>

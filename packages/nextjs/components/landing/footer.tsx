@@ -1,4 +1,3 @@
-"use client"
 
 export function Footer() {
   return (
@@ -8,11 +7,11 @@ export function Footer() {
           <div>
             <div className="flex items-center gap-2 mb-4">
               <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-emerald-600">
-                <span className="text-sm font-bold text-white">BC</span>
+                <span className="text-sm font-bold text-white">rA</span>
               </div>
-              <span className="font-bold text-gray-900">BrickChain</span>
+              <span className="font-bold text-gray-900">reAI</span>
             </div>
-            <p className="text-sm text-gray-600">Democratizing real estate investment through blockchain technology.</p>
+            <p className="text-sm text-gray-600">AI-powered real estate investment through blockchain technology.</p>
           </div>
 
           <div>
@@ -80,7 +79,7 @@ export function Footer() {
         </div>
 
         <div className="border-t border-gray-200 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-gray-600">© 2025 BrickChain. All rights reserved.</p>
+          <p className="text-sm text-gray-600">© 2025 reAI. All rights reserved.</p>
           <div className="flex gap-6">
             <a href="#" className="text-gray-600 hover:text-emerald-600 transition-colors">
               Twitter

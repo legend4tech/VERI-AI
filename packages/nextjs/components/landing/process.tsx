@@ -17,7 +17,7 @@ export function Process() {
       icon: Briefcase,
       title: "Invest",
       subtitle: "Instant ownership verification",
-      description: "Buy tokens with USDT/USDC or cNGN. Own fractions hassle-free.",
+      description: "Buy tokens with STRK Own fractions hassle-free.",
       color: "bg-blue-100",
       iconColor: "text-blue-600",
       highlightColor: "bg-blue-200",

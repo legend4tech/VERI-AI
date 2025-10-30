@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { Menu, X } from "lucide-react"
-import { Button } from "../ui/button"
+import { Button } from "~~/components/ui/button"
 import Link from "next/link"
 import { WelcomeModal } from "./welcome-modal"
 
@@ -17,9 +17,9 @@ export function Header() {
           <div className="flex items-center justify-between py-4">
             <Link href="/" className="flex items-center gap-2">
               <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-emerald-600">
-                <span className="text-sm font-bold text-white">BC</span>
+                <span className="text-sm font-bold text-white">rA</span>
               </div>
-              <span className="text-xl font-bold text-gray-900">BrickChain</span>
+              <span className="text-xl font-bold text-gray-900">reAI</span>
             </Link>
 
             <nav className="hidden gap-8 md:flex">
@@ -29,9 +29,9 @@ export function Header() {
               <Link href="/properties" className="text-sm text-gray-600 hover:text-emerald-600 transition-colors">
                 Properties
               </Link>
-              <a href="#" className="text-sm text-gray-600 hover:text-emerald-600 transition-colors">
+              <Link href="/about" className="text-sm text-gray-600 hover:text-emerald-600 transition-colors">
                 About
-              </a>
+              </Link>
               <a href="#" className="text-sm text-gray-600 hover:text-emerald-600 transition-colors">
                 Contact
               </a>
@@ -67,9 +67,9 @@ export function Header() {
               <Link href="/properties" className="text-sm text-gray-600 hover:text-emerald-600">
                 Properties
               </Link>
-              <a href="#" className="text-sm text-gray-600 hover:text-emerald-600">
+              <Link href="/about" className="text-sm text-gray-600 hover:text-emerald-600">
                 About
-              </a>
+              </Link>
               <a href="#" className="text-sm text-gray-600 hover:text-emerald-600">
                 Contact
               </a>

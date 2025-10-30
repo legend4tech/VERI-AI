@@ -19,6 +19,21 @@ import {
 import { useScaffoldStarkProfile } from "~~/hooks/scaffold-stark/useScaffoldStarkProfile";
 import useScaffoldStrkBalance from "~~/hooks/scaffold-stark/useScaffoldStrkBalance";
 
+// Add these type definitions
+type TxCall = {
+  functionCalled?: string;
+  [key: string]: any;
+};
+
+type Transaction = {
+  transactionHash?: string;
+  blockNumber?: number;
+  timestamp?: number;
+  fromAddress?: string;
+  txCalls?: TxCall[];
+  [key: string]: any;
+};
+
 interface AddressDetailsProps {
   params: Promise<{
     address: string;
@@ -458,7 +473,7 @@ export default function AddressDetails({ params }: AddressDetailsProps) {
                   </tr>
                 </thead>
                 <tbody>
-                  {transactionsData.map((txn, index) => {
+{transactionsData.map((txn: Transaction, index: number) => {
                     const age = txn.timestamp
                       ? Math.floor((Date.now() / 1000 - txn.timestamp) / 60)
                       : null;

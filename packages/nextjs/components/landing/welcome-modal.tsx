@@ -1,6 +1,6 @@
 "use client"
 
-import { Dialog, DialogContent, DialogTitle } from "../ui/dialog"
+import { Dialog, DialogContent, DialogTitle } from "~~/components/ui/dialog"
 import { ArrowRight, UserPlus } from "lucide-react"
 import Link from "next/link"
 import { useRouter } from "next/navigation"
@@ -29,7 +29,7 @@ export function WelcomeModal({ open, onOpenChange }: WelcomeModalProps) {
         <div className="flex flex-col items-center text-center space-y-4 sm:space-y-5">
           {/* Title */}
           <div className="space-y-1">
-            <DialogTitle className="text-2xl sm:text-3xl font-bold text-gray-900">Welcome to BrickChain</DialogTitle>
+            <DialogTitle className="text-2xl sm:text-3xl font-bold text-gray-900">Welcome to reAI</DialogTitle>
             <p className="text-sm sm:text-base text-gray-600">Choose how you'd like to continue</p>
           </div>
 
