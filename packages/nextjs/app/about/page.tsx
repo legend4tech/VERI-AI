@@ -2,8 +2,11 @@ import { Shield, Zap, TrendingUp, Users, Lock, BarChart3, Building2, Sparkles } 
 import { Button } from "~~/components/ui/button"
 import { Card } from "~~/components/ui/card"
 import Link from "next/link"
+import type { Metadata } from "next"
 
-export const metadata = {
+
+
+export const metadata: Metadata = {
   title: "About reAI - AI-Powered Real Estate Tokenization",
   description:
     "Learn how reAI combines blockchain technology and artificial intelligence to revolutionize real estate investment through secure asset tokenization.",
