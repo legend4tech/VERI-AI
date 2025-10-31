@@ -16,7 +16,7 @@ const ScaffoldStarkApp = ({ children }: { children: React.ReactNode }) => {
       <body suppressHydrationWarning>
         <ThemeProvider enableSystem>
           <ScaffoldStarkAppWithProviders>
-                    <Toaster />
+                    <Toaster position="top-right" richColors/>
 
             {children}
           </ScaffoldStarkAppWithProviders>

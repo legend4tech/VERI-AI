@@ -14,15 +14,15 @@ import { Checkbox } from "~~/components/ui/checkbox"
 import { RadioGroup, RadioGroupItem } from "~~/components/ui/radio-group"
 import { toast } from "sonner"
 
+// Fixed schema - remove required_error from z.enum
 const loginSchema = z.object({
   email: z.string().email("Please enter a valid email address"),
   password: z.string().min(8, "Password must be at least 8 characters"),
   userType: z.enum(["investor", "realtor"], {
-    required_error: "Please select your account type",
+    required_error: "Please select your account type", // This is the correct way
   }),
-  rememberMe: z.boolean().optional().default(false),
+  rememberMe: z.boolean().optional(),
 })
-
 type LoginFormValues = z.infer<typeof loginSchema>
 
 export function LoginForm() {
