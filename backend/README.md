@@ -1,4 +1,4 @@
-# Vera AI Backend - Enhanced Property Risk Analysis Engine
+# ReAI AI Backend - Enhanced Property Risk Analysis Engine
 
 ## Overview
 
@@ -271,3 +271,4 @@ Copyright (c) 2025. All rights reserved.
 ---
 
 **Built with ❤️ for the Nigerian Real Estate Market**
+
