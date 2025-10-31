@@ -8,14 +8,21 @@ import { Progress } from "~~/components/ui/progress"
 import { MapPin, TrendingUp } from "lucide-react"
 import { properties, Property } from "~~/data/properties-data"
 import { PropertyAnalysisModal } from "./property-analysis-modal"
+import { useRouter } from "next/navigation"
+
 
 export function Listings() {
+  const router = useRouter()
   const [selectedProperty, setSelectedProperty] = useState<Property | null>(null)
   const [isAnalysisOpen, setIsAnalysisOpen] = useState(false)
 
   const handleAnalyze = (property: Property) => {
     setSelectedProperty(property)
     setIsAnalysisOpen(true)
+  }
+
+  const handleInvest = () => {
+    router.push("/signup?type=investor")
   }
 
   return (
@@ -101,7 +108,10 @@ export function Listings() {
                     >
                       Analyse
                     </Button>
-                    <Button className="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-6">
+                    <Button
+                      onClick={handleInvest}
+                      className="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-6"
+                    >
                       Invest Now
                     </Button>
                   </div>

@@ -10,15 +10,13 @@ import { useRouter } from "next/navigation"
 import { Button } from "~~/components/ui/button"
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "~~/components/ui/form"
 import { Input } from "~~/components/ui/input"
+import { toast } from "sonner"
 
 const investorSignupSchema = z.object({
-  fullName: z.string().min(2, { message: "Full name must be at least 2 characters" }),
-  nin: z
-    .string()
-    .length(11, { message: "NIN must be exactly 11 digits" })
-    .regex(/^\d+$/, { message: "NIN must contain only numbers" }),
-  email: z.string().email({ message: "Please enter a valid email address" }),
-  password: z.string().min(8, { message: "Password must be at least 8 characters" }),
+  fullName: z.string().min(2, "Full name must be at least 2 characters"),
+  nin: z.string().length(11, "NIN must be exactly 11 digits").regex(/^\d+$/, "NIN must contain only numbers"),
+  email: z.string().email("Please enter a valid email address"),
+  password: z.string().min(8, "Password must be at least 8 characters"),
   phone: z.string().optional(),
 })
 
@@ -43,9 +41,16 @@ export function InvestorSignupForm() {
   async function onSubmit(data: InvestorSignupFormValues) {
     setIsLoading(true)
     console.log("[v0] Investor signup form submitted:", data)
-    await new Promise((resolve) => setTimeout(resolve, 1000))
+    await new Promise((resolve) => setTimeout(resolve, 1500))
     setIsLoading(false)
-    router.push("/dashboard")
+
+    toast.success("Registration successful! Welcome to reAI", {
+      description: "Redirecting to your dashboard...",
+    })
+
+    setTimeout(() => {
+      router.push("/dashboard/investor")
+    }, 1000)
   }
 
   return (

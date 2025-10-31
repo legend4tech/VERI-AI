@@ -10,6 +10,7 @@ import { useRouter } from "next/navigation"
 import { Button } from "~~/components/ui/button"
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "~~/components/ui/form"
 import { Input } from "~~/components/ui/input"
+import { toast } from "sonner"
 
 const MAX_FILE_SIZE = 5 * 1024 * 1024
 const ACCEPTED_FILE_TYPES = ["image/png", "image/jpeg", "image/jpg", "application/pdf"]
@@ -55,7 +56,8 @@ export function RealtorSignupForm() {
     console.log("[v0] Realtor signup form submitted:", data)
     await new Promise((resolve) => setTimeout(resolve, 1000))
     setIsLoading(false)
-    router.push("/dashboard")
+    toast.success("Registration successful! Welcome to reAI")
+    router.push("/dashboard/realtor")
   }
 
   return (

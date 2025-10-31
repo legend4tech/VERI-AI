@@ -20,7 +20,7 @@ export function Hero() {
             </h1>
 
             <p className="text-lg sm:text-xl text-gray-700 max-w-2xl mx-auto mb-8 leading-relaxed">
-              Invest in Lagos, Abuja, Enugu and Anambra Properties with as little as{" "}
+              Invest in Anambra, Lagos, Abuja, Enugu and Many more.. Properties with as little as{" "}
               <span className="font-semibold text-gray-900">50 STRK</span>, tokenize, trade, and earn yield all on
               blockchain
             </p>
