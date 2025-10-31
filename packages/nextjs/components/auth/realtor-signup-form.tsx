@@ -62,17 +62,17 @@ export function RealtorSignupForm() {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 sm:space-y-6">
         <FormField
           control={form.control}
           name="fullName"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="text-base font-normal text-gray-900">
+              <FormLabel className="text-sm sm:text-base font-normal text-gray-900">
                 Full Name <span className="text-red-500">*</span>
               </FormLabel>
               <FormControl>
-                <Input placeholder="Enter your full name" className="h-12" {...field} />
+                <Input placeholder="Enter your full name" className="h-11 sm:h-12" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -84,11 +84,11 @@ export function RealtorSignupForm() {
           name="email"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="text-base font-normal text-gray-900">
+              <FormLabel className="text-sm sm:text-base font-normal text-gray-900">
                 Email Address <span className="text-red-500">*</span>
               </FormLabel>
               <FormControl>
-                <Input placeholder="Enter your email" type="email" className="h-12" {...field} />
+                <Input placeholder="Enter your email" type="email" className="h-11 sm:h-12" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -100,7 +100,7 @@ export function RealtorSignupForm() {
           name="password"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="text-base font-normal text-gray-900">
+              <FormLabel className="text-sm sm:text-base font-normal text-gray-900">
                 Password <span className="text-red-500">*</span>
               </FormLabel>
               <FormControl>
@@ -108,7 +108,7 @@ export function RealtorSignupForm() {
                   <Input
                     placeholder="Enter your password"
                     type={showPassword ? "text" : "password"}
-                    className="h-12 pr-10"
+                    className="h-11 sm:h-12 pr-10"
                     {...field}
                   />
                   <button
@@ -130,9 +130,14 @@ export function RealtorSignupForm() {
           name="phone"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="text-base font-normal text-gray-900">Phone Number</FormLabel>
+              <FormLabel className="text-sm sm:text-base font-normal text-gray-900">Phone Number</FormLabel>
               <FormControl>
-                <Input placeholder="Enter your phone number (optional)" type="tel" className="h-12" {...field} />
+                <Input
+                  placeholder="Enter your phone number (optional)"
+                  type="tel"
+                  className="h-11 sm:h-12"
+                  {...field}
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -144,9 +149,9 @@ export function RealtorSignupForm() {
           name="businessName"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="text-base font-normal text-gray-900">Business Name or Company</FormLabel>
+              <FormLabel className="text-sm sm:text-base font-normal text-gray-900">Business Name or Company</FormLabel>
               <FormControl>
-                <Input placeholder="Your company name" className="h-12" {...field} />
+                <Input placeholder="Your company name" className="h-11 sm:h-12" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -158,11 +163,11 @@ export function RealtorSignupForm() {
           name="governmentId"
           render={({ field: { value, onChange, ...fieldProps } }) => (
             <FormItem>
-              <FormLabel className="text-base font-normal text-gray-900">
+              <FormLabel className="text-sm sm:text-base font-normal text-gray-900">
                 Upload Government-issued ID <span className="text-red-500">*</span>
               </FormLabel>
               <FormControl>
-                <div className="border-2 border-dashed border-gray-300 rounded-lg p-8 text-center hover:border-emerald-500 transition-colors cursor-pointer">
+                <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 sm:p-8 text-center hover:border-emerald-500 transition-colors cursor-pointer">
                   <input
                     type="file"
                     accept=".png,.jpg,.jpeg,.pdf"
@@ -172,11 +177,13 @@ export function RealtorSignupForm() {
                     {...fieldProps}
                   />
                   <label htmlFor="governmentId" className="cursor-pointer flex flex-col items-center gap-2">
-                    <Upload className="h-10 w-10 text-gray-400" />
-                    <p className="text-gray-600 font-medium">Click to upload ID document</p>
-                    <p className="text-sm text-gray-500">PNG, JPG or PDF (MAX. 5MB)</p>
+                    <Upload className="h-8 w-8 sm:h-10 sm:w-10 text-gray-400" />
+                    <p className="text-sm sm:text-base text-gray-600 font-medium">Click to upload ID document</p>
+                    <p className="text-xs sm:text-sm text-gray-500">PNG, JPG or PDF (MAX. 5MB)</p>
                     {value && value.length > 0 && (
-                      <p className="text-sm text-emerald-600 font-medium mt-2">{value[0].name}</p>
+                      <p className="text-xs sm:text-sm text-emerald-600 font-medium mt-2 break-all px-2">
+                        {value[0].name}
+                      </p>
                     )}
                   </label>
                 </div>
@@ -191,11 +198,11 @@ export function RealtorSignupForm() {
           name="companyDocument"
           render={({ field: { value, onChange, ...fieldProps } }) => (
             <FormItem>
-              <FormLabel className="text-base font-normal text-gray-900">
+              <FormLabel className="text-sm sm:text-base font-normal text-gray-900">
                 Upload Company Document (CAC or License) <span className="text-red-500">*</span>
               </FormLabel>
               <FormControl>
-                <div className="border-2 border-dashed border-gray-300 rounded-lg p-8 text-center hover:border-emerald-500 transition-colors cursor-pointer">
+                <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 sm:p-8 text-center hover:border-emerald-500 transition-colors cursor-pointer">
                   <input
                     type="file"
                     accept=".png,.jpg,.jpeg,.pdf"
@@ -205,11 +212,13 @@ export function RealtorSignupForm() {
                     {...fieldProps}
                   />
                   <label htmlFor="companyDocument" className="cursor-pointer flex flex-col items-center gap-2">
-                    <Upload className="h-10 w-10 text-gray-400" />
-                    <p className="text-gray-600 font-medium">Click to upload company document</p>
-                    <p className="text-sm text-gray-500">PNG, JPG or PDF (MAX. 5MB)</p>
+                    <Upload className="h-8 w-8 sm:h-10 sm:w-10 text-gray-400" />
+                    <p className="text-sm sm:text-base text-gray-600 font-medium">Click to upload company document</p>
+                    <p className="text-xs sm:text-sm text-gray-500">PNG, JPG or PDF (MAX. 5MB)</p>
                     {value && value.length > 0 && (
-                      <p className="text-sm text-emerald-600 font-medium mt-2">{value[0].name}</p>
+                      <p className="text-xs sm:text-sm text-emerald-600 font-medium mt-2 break-all px-2">
+                        {value[0].name}
+                      </p>
                     )}
                   </label>
                 </div>
@@ -219,25 +228,25 @@ export function RealtorSignupForm() {
           )}
         />
 
-        <div className="flex gap-4">
+        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2">
           <Button
             type="button"
             onClick={() => router.back()}
             variant="outline"
-            className="h-12 px-8 font-medium text-base"
+            className="h-11 sm:h-12 px-6 sm:px-8 font-medium text-sm sm:text-base order-2 sm:order-1"
           >
             Back
           </Button>
           <Button
             type="submit"
             disabled={isLoading}
-            className="flex-1 h-12 bg-emerald-600 hover:bg-emerald-700 text-white font-medium text-base transition-colors"
+            className="flex-1 h-11 sm:h-12 bg-emerald-600 hover:bg-emerald-700 text-white font-medium text-sm sm:text-base transition-colors order-1 sm:order-2"
           >
             {isLoading ? "Registering..." : "Complete Registration"}
           </Button>
         </div>
 
-        <p className="text-center text-sm text-gray-600">
+        <p className="text-center text-xs sm:text-sm text-gray-600 pt-2">
           Already have an account?{" "}
           <Link href="/login" className="font-medium text-emerald-600 hover:text-emerald-700 transition-colors">
             Login

@@ -13,15 +13,16 @@ import { CommissionChart } from "~~/components/realtor-dashboard/commission-char
 import { RecentActivity } from "~~/components/realtor-dashboard/recent-activity"
 import { QuickActionsRealtor } from "~~/components/realtor-dashboard/quick-actions-realtor"
 import { MonthlyStats } from "~~/components/realtor-dashboard/monthly-stats"
+import { AddPropertyModal } from "~~/components/realtor-dashboard/add-property-modal"
 
 
 export default function RealtorDashboard() {
   const [searchQuery, setSearchQuery] = useState("")
+  const [isAddPropertyOpen, setIsAddPropertyOpen] = useState(false)
 
-  // Use our existing properties data
- const realtorProperties = properties.map((property, index) => ({
+const realtorProperties = properties.map((property, index) => ({
   ...property,
-  title: property.name, // Add this line to create a title field from name
+  title: property.name, 
   investors: [45, 67, 23, 38, 52][index] || 30,
   fundingProgress: [85, 92, 68, 75, 88][index] || 70,
   addedDate: ["2024-01-15", "2024-01-10", "2024-01-20", "2024-01-08", "2024-01-12"][index] || "2024-01-15",
@@ -56,7 +57,10 @@ export default function RealtorDashboard() {
             <Card className="p-6">
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
                 <h2 className="text-2xl font-bold text-gray-900">My Property Listings</h2>
-                <Button className="bg-emerald-600 hover:bg-emerald-700 text-white">
+                <Button
+                  onClick={() => setIsAddPropertyOpen(true)}
+                  className="bg-emerald-600 hover:bg-emerald-700 text-white"
+                >
                   <Plus className="h-4 w-4 mr-2" />
                   Add Property
                 </Button>
@@ -148,12 +152,15 @@ export default function RealtorDashboard() {
 
           {/* Right Column - Recent Activity, Quick Actions, Monthly Stats */}
           <div className="space-y-6">
-            <RecentActivity/>
+            <RecentActivity />
             <QuickActionsRealtor />
             <MonthlyStats />
           </div>
         </div>
       </div>
+
+      {/* Add Property Modal */}
+      <AddPropertyModal open={isAddPropertyOpen} onOpenChange={setIsAddPropertyOpen} />
     </div>
   )
 }

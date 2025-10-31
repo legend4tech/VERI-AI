@@ -1,32 +1,42 @@
+"use client"
+
 import { Plus, BarChart3, FileText, Users } from "lucide-react"
 import { Card } from "~~/components/ui/card"
 import { Button } from "~~/components/ui/button"
 
-export function QuickActionsRealtor() {
+interface QuickActionsRealtorProps {
+  onAddPropertyClick?: () => void
+}
+
+export function QuickActionsRealtor({ onAddPropertyClick }: QuickActionsRealtorProps) {
   const actions = [
     {
       icon: Plus,
       iconBg: "bg-emerald-600",
       title: "Add Property",
       description: "List a new property for tokenization",
+      onClick: onAddPropertyClick,
     },
     {
       icon: BarChart3,
       iconBg: "bg-blue-600",
       title: "View Analytics",
       description: "Check detailed performance metrics",
+      onClick: () => {}, // Placeholder for future functionality
     },
     {
       icon: FileText,
       iconBg: "bg-purple-600",
       title: "Manage Documents",
       description: "Upload and organize property documents",
+      onClick: () => {}, // Placeholder for future functionality
     },
     {
       icon: Users,
       iconBg: "bg-orange-600",
       title: "Investor Relations",
       description: "Communicate with your investors",
+      onClick: () => {}, // Placeholder for future functionality
     },
   ]
 
@@ -38,6 +48,7 @@ export function QuickActionsRealtor() {
           <Button
             key={index}
             variant="outline"
+            onClick={action.onClick}
             className="w-full justify-start h-auto p-4 hover:bg-gray-50 transition-colors bg-transparent"
           >
             <div className="flex items-center gap-4 w-full">

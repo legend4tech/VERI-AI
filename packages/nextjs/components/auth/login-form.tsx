@@ -6,15 +6,21 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import * as z from "zod"
 import { Eye, EyeOff } from "lucide-react"
 import Link from "next/link"
+import { useRouter } from "next/navigation"
 import { Button } from "~~/components/ui/button"
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "~~/components/ui/form"
 import { Input } from "~~/components/ui/input"
 import { Checkbox } from "~~/components/ui/checkbox"
+import { RadioGroup, RadioGroupItem } from "~~/components/ui/radio-group"
+import { toast } from "sonner"
 
 const loginSchema = z.object({
   email: z.string().email("Please enter a valid email address"),
   password: z.string().min(8, "Password must be at least 8 characters"),
-  rememberMe: z.boolean().optional(),
+  userType: z.enum(["investor", "realtor"], {
+    required_error: "Please select your account type",
+  }),
+  rememberMe: z.boolean().optional().default(false),
 })
 
 type LoginFormValues = z.infer<typeof loginSchema>
@@ -22,6 +28,7 @@ type LoginFormValues = z.infer<typeof loginSchema>
 export function LoginForm() {
   const [showPassword, setShowPassword] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
+  const router = useRouter()
 
   const form = useForm<LoginFormValues>({
     resolver: zodResolver(loginSchema),
@@ -35,9 +42,20 @@ export function LoginForm() {
   async function onSubmit(data: LoginFormValues) {
     setIsLoading(true)
     console.log("[v0] Login form submitted:", data)
-    // TODO: Implement login logic
-    await new Promise((resolve) => setTimeout(resolve, 1000))
+    await new Promise((resolve) => setTimeout(resolve, 1500))
     setIsLoading(false)
+
+    toast.success("Login successful! Welcome back", {
+      description: "Redirecting to your dashboard...",
+    })
+
+    setTimeout(() => {
+      if (data.userType === "investor") {
+        router.push("/dashboard/investor")
+      } else {
+        router.push("/dashboard/realtor")
+      }
+    }, 1000)
   }
 
   return (
@@ -85,7 +103,42 @@ export function LoginForm() {
           )}
         />
 
-        <div className="flex items-center justify-between">
+        <FormField
+          control={form.control}
+          name="userType"
+          render={({ field }) => (
+            <FormItem className="space-y-3">
+              <FormLabel className="text-base font-normal text-gray-900">
+                I am signing in as <span className="text-red-500">*</span>
+              </FormLabel>
+              <FormControl>
+                <RadioGroup onValueChange={field.onChange} defaultValue={field.value} className="flex gap-4">
+                  <div className="flex items-center space-x-2 flex-1">
+                    <RadioGroupItem value="investor" id="investor" />
+                    <label
+                      htmlFor="investor"
+                      className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 cursor-pointer"
+                    >
+                      Investor
+                    </label>
+                  </div>
+                  <div className="flex items-center space-x-2 flex-1">
+                    <RadioGroupItem value="realtor" id="realtor" />
+                    <label
+                      htmlFor="realtor"
+                      className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 cursor-pointer"
+                    >
+                      Realtor
+                    </label>
+                  </div>
+                </RadioGroup>
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+
+        <div className="flex items-center justify-between flex-wrap gap-2">
           <FormField
             control={form.control}
             name="rememberMe"
@@ -113,13 +166,6 @@ export function LoginForm() {
         >
           {isLoading ? "Signing in..." : "Sign In"}
         </Button>
-
-        <p className="text-center text-sm text-gray-600">
-          Don't have an account?{" "}
-          <Link href="/onboarding" className="font-medium text-emerald-600 hover:text-emerald-700 transition-colors">
-            Sign up
-          </Link>
-        </p>
       </form>
     </Form>
   )

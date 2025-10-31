@@ -55,17 +55,17 @@ export function InvestorSignupForm() {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 sm:space-y-6">
         <FormField
           control={form.control}
           name="fullName"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="text-base font-normal text-gray-900">
+              <FormLabel className="text-sm sm:text-base font-normal text-gray-900">
                 Full Name <span className="text-red-500">*</span>
               </FormLabel>
               <FormControl>
-                <Input placeholder="Enter your full name" className="h-12" {...field} />
+                <Input placeholder="Enter your full name" className="h-11 sm:h-12" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -77,11 +77,11 @@ export function InvestorSignupForm() {
           name="nin"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="text-base font-normal text-gray-900">
+              <FormLabel className="text-sm sm:text-base font-normal text-gray-900">
                 NIN (National Identification Number) <span className="text-red-500">*</span>
               </FormLabel>
               <FormControl>
-                <Input placeholder="Enter your 11-digit NIN" className="h-12" maxLength={11} {...field} />
+                <Input placeholder="Enter your 11-digit NIN" className="h-11 sm:h-12" maxLength={11} {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -93,11 +93,11 @@ export function InvestorSignupForm() {
           name="email"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="text-base font-normal text-gray-900">
+              <FormLabel className="text-sm sm:text-base font-normal text-gray-900">
                 Email Address <span className="text-red-500">*</span>
               </FormLabel>
               <FormControl>
-                <Input placeholder="Enter your email" type="email" className="h-12" {...field} />
+                <Input placeholder="Enter your email" type="email" className="h-11 sm:h-12" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -109,7 +109,7 @@ export function InvestorSignupForm() {
           name="password"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="text-base font-normal text-gray-900">
+              <FormLabel className="text-sm sm:text-base font-normal text-gray-900">
                 Password <span className="text-red-500">*</span>
               </FormLabel>
               <FormControl>
@@ -117,7 +117,7 @@ export function InvestorSignupForm() {
                   <Input
                     placeholder="Enter your password"
                     type={showPassword ? "text" : "password"}
-                    className="h-12 pr-10"
+                    className="h-11 sm:h-12 pr-10"
                     {...field}
                   />
                   <button
@@ -139,34 +139,39 @@ export function InvestorSignupForm() {
           name="phone"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="text-base font-normal text-gray-900">Phone Number</FormLabel>
+              <FormLabel className="text-sm sm:text-base font-normal text-gray-900">Phone Number</FormLabel>
               <FormControl>
-                <Input placeholder="Enter your phone number (optional)" type="tel" className="h-12" {...field} />
+                <Input
+                  placeholder="Enter your phone number (optional)"
+                  type="tel"
+                  className="h-11 sm:h-12"
+                  {...field}
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
         />
 
-        <div className="flex gap-4">
+        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2">
           <Button
             type="button"
             onClick={() => router.back()}
             variant="outline"
-            className="h-12 px-8 font-medium text-base"
+            className="h-11 sm:h-12 px-6 sm:px-8 font-medium text-sm sm:text-base order-2 sm:order-1"
           >
             Back
           </Button>
           <Button
             type="submit"
             disabled={isLoading}
-            className="flex-1 h-12 bg-emerald-600 hover:bg-emerald-700 text-white font-medium text-base transition-colors"
+            className="flex-1 h-11 sm:h-12 bg-emerald-600 hover:bg-emerald-700 text-white font-medium text-sm sm:text-base transition-colors order-1 sm:order-2"
           >
             {isLoading ? "Registering..." : "Complete Registration"}
           </Button>
         </div>
 
-        <p className="text-center text-sm text-gray-600">
+        <p className="text-center text-xs sm:text-sm text-gray-600 pt-2">
           Already have an account?{" "}
           <Link href="/login" className="font-medium text-emerald-600 hover:text-emerald-700 transition-colors">
             Login
