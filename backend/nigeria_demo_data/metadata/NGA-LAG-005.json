@@ -1,0 +1,26 @@
+{
+  "name": "Vera AI Asset: NGA-LAG-005",
+  "description": "Tokenized asset representing property in Ikeja GRA, Lagos. Owned by Hope Adeyemi. Property is currently used as collateral for financial obligations.",
+  "attributes": [
+    {
+      "trait_type": "Human-Readable ID",
+      "value": "NGA-LAG-005"
+    },
+    {
+      "trait_type": "Deed of Assignment Path",
+      "value": "nigeria_demo_data/NGA-LAG-005_Deed_of_Assignment.txt"
+    },
+    {
+      "trait_type": "Public News API Path",
+      "value": "nigeria_demo_data/Nigerian_Gazette_Alerts.json"
+    },
+    {
+      "trait_type": "Land Registry File Path",
+      "value": "nigeria_demo_data/Nigerian_Land_Registry_Mock.csv"
+    },
+    {
+      "trait_type": "Registry Search Key",
+      "value": "C-OF-O-FBC8A82C"
+    }
+  ]
+}

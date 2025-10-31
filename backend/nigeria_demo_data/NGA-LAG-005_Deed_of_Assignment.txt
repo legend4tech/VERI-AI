@@ -1,0 +1,40 @@
+
+DEED OF ASSIGNMENT
+
+Property ID: NGA-LAG-005
+Certificate of Occupancy: C-OF-O-FBC8A82C
+Date of Registration: 2012-07-19
+
+PROPERTY DETAILS:
+Plot Number: 49
+Block Number: 34
+Area: Ikeja GRA
+State: Lagos
+Status: Verified
+
+OWNERSHIP INFORMATION:
+Current Owner: Hope Adeyemi
+Registration Date: 2012-07-19
+
+PROPERTY DESCRIPTION:
+This deed of assignment covers the property located at Plot 49, 
+Block 34, Ikeja GRA, Lagos State.
+
+The property is registered under Certificate of Occupancy C-OF-O-FBC8A82C 
+and is currently owned by Hope Adeyemi.
+
+
+FINANCIAL ENCUMBRANCE NOTICE:
+This property is currently pledged as collateral for financial obligations.
+Any transfer or sale requires clearance from the lending institution.
+
+PLEDGE DETAILS:
+- Property used as loan collateral
+- Financial institution holds security interest
+- Clearance required for any transactions
+
+
+DOCUMENT GENERATED: 2025-10-30 09:26:18
+RISK ASSESSMENT: Financial Pledge
+
+This document is generated for testing purposes in the Vira Engine system.

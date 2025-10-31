@@ -1,0 +1,40 @@
+
+DEED OF ASSIGNMENT
+
+Property ID: NGA-ENU-004
+Certificate of Occupancy: C-OF-O-E2F5B6E1
+Date of Registration: 2019-02-02
+
+PROPERTY DETAILS:
+Plot Number: 40
+Block Number: 2
+Area: GRA
+State: Enugu
+Status: Verified
+
+OWNERSHIP INFORMATION:
+Current Owner: Sarah Okafor
+Registration Date: 2019-02-02
+
+PROPERTY DESCRIPTION:
+This deed of assignment covers the property located at Plot 40, 
+Block 2, GRA, Enugu State.
+
+The property is registered under Certificate of Occupancy C-OF-O-E2F5B6E1 
+and is currently owned by Sarah Okafor.
+
+
+FINANCIAL ENCUMBRANCE NOTICE:
+This property is currently pledged as collateral for financial obligations.
+Any transfer or sale requires clearance from the lending institution.
+
+PLEDGE DETAILS:
+- Property used as loan collateral
+- Financial institution holds security interest
+- Clearance required for any transactions
+
+
+DOCUMENT GENERATED: 2025-10-30 09:26:18
+RISK ASSESSMENT: Financial Pledge
+
+This document is generated for testing purposes in the Vira Engine system.
