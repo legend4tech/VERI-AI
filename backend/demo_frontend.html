@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vera AI - Asset Risk Analyzer</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .input-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+        
+        input, select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        
+        input:focus, select:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        
+        button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 10px;
+        }
+        
+        button:hover {
+            opacity: 0.9;
+        }
+        
+        button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+        
+        .result {
+            margin-top: 30px;
+            padding: 20px;
+            border-radius: 8px;
+            display: none;
+        }
+        
+        .result.success {
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+        }
+        
+        .result.error {
+            background: #f8d7da;
+            border: 1px solid #f5c6cb;
+            color: #721c24;
+        }
+        
+        .risk-score {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            margin: 15px 0;
+        }
+        
+        .risk-low { color: #28a745; }
+        .risk-medium { color: #ffc107; }
+        .risk-high { color: #dc3545; }
+        
+        .loading {
+            text-align: center;
+            color: #666;
+        }
+        
+        .sample-tokens {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        
+        .sample-tokens h3 {
+            margin-top: 0;
+            color: #333;
+        }
+        
+        .token-button {
+            display: inline-block;
+            background: #e9ecef;
+            color: #495057;
+            padding: 5px 10px;
+            margin: 3px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+        
+        .token-button:hover {
+            background: #dee2e6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🛡️ Vera AI - Asset Risk Analyzer</h1>
+        
+        <div class="input-group">
+            <label for="apiUrl">API URL:</label>
+            <input type="url" id="apiUrl" placeholder="https://your-app.onrender.com" 
+                   value="http://localhost:8000">
+        </div>
+        
+        <div class="sample-tokens">
+            <h3>Sample Token IDs (click to use):</h3>
+            <span class="token-button" onclick="setToken('NGA-LAG-001')">NGA-LAG-001</span>
+            <span class="token-button" onclick="setToken('NGA-LAG-002')">NGA-LAG-002</span>
+            <span class="token-button" onclick="setToken('NGA-AWK-001')">NGA-AWK-001</span>
+            <span class="token-button" onclick="setToken('NGA-ENU-001')">NGA-ENU-001</span>
+        </div>
+        
+        <div class="input-group">
+            <label for="tokenId">Asset Token ID:</label>
+            <input type="text" id="tokenId" placeholder="Enter token ID (e.g., NGA-LAG-001)">
+        </div>
+        
+        <button onclick="analyzeAsset()" id="analyzeBtn">
+            🔍 Analyze Asset Risk
+        </button>
+        
+        <div id="result" class="result">
+            <div id="resultContent"></div>
+        </div>
+    </div>
+
+    <script>
+        function setToken(tokenId) {
+            document.getElementById('tokenId').value = tokenId;
+        }
+        
+        async function analyzeAsset() {
+            const apiUrl = document.getElementById('apiUrl').value.replace(/\/$/, '');
+            const tokenId = document.getElementById('tokenId').value.trim();
+            const resultDiv = document.getElementById('result');
+            const resultContent = document.getElementById('resultContent');
+            const analyzeBtn = document.getElementById('analyzeBtn');
+            
+            if (!tokenId) {
+                alert('Please enter a token ID');
+                return;
+            }
+            
+            // Show loading state
+            analyzeBtn.disabled = true;
+            analyzeBtn.textContent = '🔄 Analyzing...';
+            resultDiv.style.display = 'block';
+            resultDiv.className = 'result';
+            resultContent.innerHTML = '<div class="loading">Analyzing asset risk... This may take 10-30 seconds.</div>';
+            
+            try {
+                const response = await fetch(`${apiUrl}/analyze/${tokenId}`);
+                const data = await response.json();
+                
+                if (response.ok) {
+                    // Success
+                    resultDiv.className = 'result success';
+                    
+                    const riskScore = data.analysis_report?.risk_score || 'N/A';
+                    const riskCategory = data.analysis_report?.risk_assessment?.risk_category || 'Unknown';
+                    const summary = data.analysis_report?.risk_assessment?.summary || 'No summary available';
+                    const dataSource = data.analysis_report?.risk_assessment?.data_source || 'unknown';
+                    
+                    let riskClass = 'risk-low';
+                    if (riskScore > 70) riskClass = 'risk-high';
+                    else if (riskScore > 40) riskClass = 'risk-medium';
+                    
+                    resultContent.innerHTML = `
+                        <h3>✅ Analysis Complete for ${tokenId}</h3>
+                        <div class="risk-score ${riskClass}">
+                            Risk Score: ${riskScore}/100
+                        </div>
+                        <p><strong>Risk Category:</strong> ${riskCategory}</p>
+                        <p><strong>Summary:</strong> ${summary}</p>
+                        <p><strong>Data Source:</strong> ${dataSource}</p>
+                        <p><strong>Timestamp:</strong> ${data.timestamp}</p>
+                        
+                        <details style="margin-top: 15px;">
+                            <summary>View Full Response</summary>
+                            <pre style="background: #f8f9fa; padding: 10px; border-radius: 5px; overflow-x: auto; font-size: 12px;">${JSON.stringify(data, null, 2)}</pre>
+                        </details>
+                    `;
+                } else {
+                    // Error from API
+                    resultDiv.className = 'result error';
+                    resultContent.innerHTML = `
+                        <h3>❌ Analysis Failed</h3>
+                        <p><strong>Error:</strong> ${data.detail || 'Unknown error'}</p>
+                        <p><strong>Status Code:</strong> ${response.status}</p>
+                    `;
+                }
+            } catch (error) {
+                // Network or other error
+                resultDiv.className = 'result error';
+                resultContent.innerHTML = `
+                    <h3>❌ Connection Error</h3>
+                    <p><strong>Error:</strong> ${error.message}</p>
+                    <p>Please check that:</p>
+                    <ul>
+                        <li>The API URL is correct</li>
+                        <li>The API server is running</li>
+                        <li>CORS is properly configured</li>
+                    </ul>
+                `;
+            } finally {
+                // Reset button
+                analyzeBtn.disabled = false;
+                analyzeBtn.textContent = '🔍 Analyze Asset Risk';
+            }
+        }
+        
+        // Allow Enter key to trigger analysis
+        document.getElementById('tokenId').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                analyzeAsset();
+            }
+        });
+        
+        // Test API connection on page load
+        window.addEventListener('load', async function() {
+            const apiUrl = document.getElementById('apiUrl').value.replace(/\/$/, '');
+            try {
+                const response = await fetch(`${apiUrl}/health`);
+                if (response.ok) {
+                    console.log('✅ API connection successful');
+                } else {
+                    console.log('⚠️ API responded but with error status');
+                }
+            } catch (error) {
+                console.log('❌ Could not connect to API:', error.message);
+            }
+        });
+    </script>
+</body>
+</html>

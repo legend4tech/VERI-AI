@@ -1,0 +1,437 @@
+[
+  {
+    "token_id": "NGA-AWK-001",
+    "name": "Vera AI Asset: NGA-AWK-001",
+    "description": "Tokenized asset representing property in Udoka Housing Estate, Anambra. Owned by Anambra Digital Hub Ltd..",
+    "attributes": [
+      {
+        "trait_type": "Human-Readable ID",
+        "value": "NGA-AWK-001"
+      },
+      {
+        "trait_type": "Deed of Assignment Path",
+        "value": "nigeria_demo_data/NGA-AWK-001_Deed_of_Assignment.txt"
+      },
+      {
+        "trait_type": "Public News API Path",
+        "value": "nigeria_demo_data/Nigerian_Gazette_Alerts.json"
+      },
+      {
+        "trait_type": "Land Registry File Path",
+        "value": "nigeria_demo_data/Nigerian_Land_Registry_Mock.csv"
+      },
+      {
+        "trait_type": "Registry Search Key",
+        "value": "C-OF-O-AWK-001"
+      }
+    ],
+    "created_at": "2025-10-30T16:26:54.077349",
+    "data_source": "property_metadata"
+  },
+  {
+    "token_id": "NGA-AWK-002",
+    "name": "Vera AI Asset: NGA-AWK-002",
+    "description": "Tokenized asset representing property in Agu-Awka, Anambra. Owned by The Okeke Family Trust.",
+    "attributes": [
+      {
+        "trait_type": "Human-Readable ID",
+        "value": "NGA-AWK-002"
+      },
+      {
+        "trait_type": "Deed of Assignment Path",
+        "value": "nigeria_demo_data/NGA-AWK-002_Deed_of_Assignment.txt"
+      },
+      {
+        "trait_type": "Public News API Path",
+        "value": "nigeria_demo_data/Nigerian_Gazette_Alerts.json"
+      },
+      {
+        "trait_type": "Land Registry File Path",
+        "value": "nigeria_demo_data/Nigerian_Land_Registry_Mock.csv"
+      },
+      {
+        "trait_type": "Registry Search Key",
+        "value": "C-OF-O-AWK-002"
+      }
+    ],
+    "created_at": "2025-10-30T16:26:54.077733",
+    "data_source": "property_metadata"
+  },
+  {
+    "token_id": "NGA-AWK-003",
+    "name": "Vera AI Asset: NGA-AWK-003",
+    "description": "Tokenized asset representing property in Onitsha GRA, Anambra. Owned by Gloria Nnamani. Property faces potential government acquisition or revocation.",
+    "attributes": [
+      {
+        "trait_type": "Human-Readable ID",
+        "value": "NGA-AWK-003"
+      },
+      {
+        "trait_type": "Deed of Assignment Path",
+        "value": "nigeria_demo_data/NGA-AWK-003_Deed_of_Assignment.txt"
+      },
+      {
+        "trait_type": "Public News API Path",
+        "value": "nigeria_demo_data/Nigerian_Gazette_Alerts.json"
+      },
+      {
+        "trait_type": "Land Registry File Path",
+        "value": "nigeria_demo_data/Nigerian_Land_Registry_Mock.csv"
+      },
+      {
+        "trait_type": "Registry Search Key",
+        "value": "C-OF-O-E68FB428"
+      }
+    ],
+    "created_at": "2025-10-30T16:26:54.078070",
+    "data_source": "property_metadata"
+  },
+  {
+    "token_id": "NGA-AWK-004",
+    "name": "Vera AI Asset: NGA-AWK-004",
+    "description": "Tokenized asset representing property in Nnewi, Anambra. Owned by Comfort Oshodi. Property has competing ownership claims and requires legal verification.",
+    "attributes": [
+      {
+        "trait_type": "Human-Readable ID",
+        "value": "NGA-AWK-004"
+      },
+      {
+        "trait_type": "Deed of Assignment Path",
+        "value": "nigeria_demo_data/NGA-AWK-004_Deed_of_Assignment.txt"
+      },
+      {
+        "trait_type": "Public News API Path",
+        "value": "nigeria_demo_data/Nigerian_Gazette_Alerts.json"
+      },
+      {
+        "trait_type": "Land Registry File Path",
+        "value": "nigeria_demo_data/Nigerian_Land_Registry_Mock.csv"
+      },
+      {
+        "trait_type": "Registry Search Key",
+        "value": "C-OF-O-1160A5FB"
+      }
+    ],
+    "created_at": "2025-10-30T16:26:54.078412",
+    "data_source": "property_metadata"
+  },
+  {
+    "token_id": "NGA-AWK-005",
+    "name": "Vera AI Asset: NGA-AWK-005",
+    "description": "Tokenized asset representing property in Uwani, Enugu. Owned by Patience Akinwale. Property has clean title with no identified risks or encumbrances.",
+    "attributes": [
+      {
+        "trait_type": "Human-Readable ID",
+        "value": "NGA-AWK-005"
+      },
+      {
+        "trait_type": "Deed of Assignment Path",
+        "value": "nigeria_demo_data/NGA-AWK-005_Deed_of_Assignment.txt"
+      },
+      {
+        "trait_type": "Public News API Path",
+        "value": "nigeria_demo_data/Nigerian_Gazette_Alerts.json"
+      },
+      {
+        "trait_type": "Land Registry File Path",
+        "value": "nigeria_demo_data/Nigerian_Land_Registry_Mock.csv"
+      },
+      {
+        "trait_type": "Registry Search Key",
+        "value": "C-OF-O-8AA5F809"
+      }
+    ],
+    "created_at": "2025-10-30T16:26:54.078720",
+    "data_source": "property_metadata"
+  },
+  {
+    "token_id": "NGA-ENU-001",
+    "name": "Vera AI Asset: NGA-ENU-001",
+    "description": "Tokenized asset representing property in Independence Layout, Enugu. Owned by Eastern Minerals Corp..",
+    "attributes": [
+      {
+        "trait_type": "Human-Readable ID",
+        "value": "NGA-ENU-001"
+      },
+      {
+        "trait_type": "Deed of Assignment Path",
+        "value": "nigeria_demo_data/NGA-ENU-001_Deed_of_Assignment.txt"
+      },
+      {
+        "trait_type": "Public News API Path",
+        "value": "nigeria_demo_data/Nigerian_Gazette_Alerts.json"
+      },
+      {
+        "trait_type": "Land Registry File Path",
+        "value": "nigeria_demo_data/Nigerian_Land_Registry_Mock.csv"
+      },
+      {
+        "trait_type": "Registry Search Key",
+        "value": "C-OF-O-ENU-001"
+      }
+    ],
+    "created_at": "2025-10-30T16:26:54.079046",
+    "data_source": "property_metadata"
+  },
+  {
+    "token_id": "NGA-ENU-002",
+    "name": "Vera AI Asset: NGA-ENU-002",
+    "description": "Tokenized asset representing property in GRA, Enugu. Owned by Esther Balogun. Property has competing ownership claims and requires legal verification.",
+    "attributes": [
+      {
+        "trait_type": "Human-Readable ID",
+        "value": "NGA-ENU-002"
+      },
+      {
+        "trait_type": "Deed of Assignment Path",
+        "value": "nigeria_demo_data/NGA-ENU-002_Deed_of_Assignment.txt"
+      },
+      {
+        "trait_type": "Public News API Path",
+        "value": "nigeria_demo_data/Nigerian_Gazette_Alerts.json"
+      },
+      {
+        "trait_type": "Land Registry File Path",
+        "value": "nigeria_demo_data/Nigerian_Land_Registry_Mock.csv"
+      },
+      {
+        "trait_type": "Registry Search Key",
+        "value": "C-OF-O-49B65A2C"
+      }
+    ],
+    "created_at": "2025-10-30T16:26:54.079367",
+    "data_source": "property_metadata"
+  },
+  {
+    "token_id": "NGA-ENU-003",
+    "name": "Vera AI Asset: NGA-ENU-003",
+    "description": "Tokenized asset representing property in New Haven, Enugu. Owned by Grace Balogun. Property has clean title with no identified risks or encumbrances.",
+    "attributes": [
+      {
+        "trait_type": "Human-Readable ID",
+        "value": "NGA-ENU-003"
+      },
+      {
+        "trait_type": "Deed of Assignment Path",
+        "value": "nigeria_demo_data/NGA-ENU-003_Deed_of_Assignment.txt"
+      },
+      {
+        "trait_type": "Public News API Path",
+        "value": "nigeria_demo_data/Nigerian_Gazette_Alerts.json"
+      },
+      {
+        "trait_type": "Land Registry File Path",
+        "value": "nigeria_demo_data/Nigerian_Land_Registry_Mock.csv"
+      },
+      {
+        "trait_type": "Registry Search Key",
+        "value": "C-OF-O-0BB0F9F2"
+      }
+    ],
+    "created_at": "2025-10-30T16:26:54.079739",
+    "data_source": "property_metadata"
+  },
+  {
+    "token_id": "NGA-ENU-004",
+    "name": "Vera AI Asset: NGA-ENU-004",
+    "description": "Tokenized asset representing property in GRA, Enugu. Owned by Sarah Okafor. Property is currently used as collateral for financial obligations.",
+    "attributes": [
+      {
+        "trait_type": "Human-Readable ID",
+        "value": "NGA-ENU-004"
+      },
+      {
+        "trait_type": "Deed of Assignment Path",
+        "value": "nigeria_demo_data/NGA-ENU-004_Deed_of_Assignment.txt"
+      },
+      {
+        "trait_type": "Public News API Path",
+        "value": "nigeria_demo_data/Nigerian_Gazette_Alerts.json"
+      },
+      {
+        "trait_type": "Land Registry File Path",
+        "value": "nigeria_demo_data/Nigerian_Land_Registry_Mock.csv"
+      },
+      {
+        "trait_type": "Registry Search Key",
+        "value": "C-OF-O-E2F5B6E1"
+      }
+    ],
+    "created_at": "2025-10-30T16:26:54.080077",
+    "data_source": "property_metadata"
+  },
+  {
+    "token_id": "NGA-LAG-001",
+    "name": "Vera AI Asset: NGA-LAG-001",
+    "description": "Tokenized asset representing property in Lekki Scheme 1, Lagos. Owned by RealVest Nigeria PLC.",
+    "attributes": [
+      {
+        "trait_type": "Human-Readable ID",
+        "value": "NGA-LAG-001"
+      },
+      {
+        "trait_type": "Deed of Assignment Path",
+        "value": "nigeria_demo_data/NGA-LAG-001_Deed_of_Assignment.txt"
+      },
+      {
+        "trait_type": "Public News API Path",
+        "value": "nigeria_demo_data/Nigerian_Gazette_Alerts.json"
+      },
+      {
+        "trait_type": "Land Registry File Path",
+        "value": "nigeria_demo_data/Nigerian_Land_Registry_Mock.csv"
+      },
+      {
+        "trait_type": "Registry Search Key",
+        "value": "C-OF-O-LAG-001"
+      }
+    ],
+    "created_at": "2025-10-30T16:26:54.080420",
+    "data_source": "property_metadata"
+  },
+  {
+    "token_id": "NGA-LAG-002",
+    "name": "Vera AI Asset: NGA-LAG-002",
+    "description": "Tokenized asset representing property in Apapa, Lagos. Owned by Global Shipping Inc..",
+    "attributes": [
+      {
+        "trait_type": "Human-Readable ID",
+        "value": "NGA-LAG-002"
+      },
+      {
+        "trait_type": "Deed of Assignment Path",
+        "value": "nigeria_demo_data/NGA-LAG-002_Deed_of_Assignment.txt"
+      },
+      {
+        "trait_type": "Public News API Path",
+        "value": "nigeria_demo_data/Nigerian_Gazette_Alerts.json"
+      },
+      {
+        "trait_type": "Land Registry File Path",
+        "value": "nigeria_demo_data/Nigerian_Land_Registry_Mock.csv"
+      },
+      {
+        "trait_type": "Registry Search Key",
+        "value": "C-OF-O-LAG-002"
+      }
+    ],
+    "created_at": "2025-10-30T16:26:54.080753",
+    "data_source": "property_metadata"
+  },
+  {
+    "token_id": "NGA-LAG-003",
+    "name": "Vera AI Asset: NGA-LAG-003",
+    "description": "Tokenized asset representing property in Surulere, Lagos. Owned by Joshua Obi. Property has competing ownership claims and requires legal verification.",
+    "attributes": [
+      {
+        "trait_type": "Human-Readable ID",
+        "value": "NGA-LAG-003"
+      },
+      {
+        "trait_type": "Deed of Assignment Path",
+        "value": "nigeria_demo_data/NGA-LAG-003_Deed_of_Assignment.txt"
+      },
+      {
+        "trait_type": "Public News API Path",
+        "value": "nigeria_demo_data/Nigerian_Gazette_Alerts.json"
+      },
+      {
+        "trait_type": "Land Registry File Path",
+        "value": "nigeria_demo_data/Nigerian_Land_Registry_Mock.csv"
+      },
+      {
+        "trait_type": "Registry Search Key",
+        "value": "C-OF-O-2EA577B4"
+      }
+    ],
+    "created_at": "2025-10-30T16:26:54.081093",
+    "data_source": "property_metadata"
+  },
+  {
+    "token_id": "NGA-LAG-004",
+    "name": "Vera AI Asset: NGA-LAG-004",
+    "description": "Tokenized asset representing property in Surulere, Lagos. Owned by Gloria Chukwu. Property has clean title with no identified risks or encumbrances.",
+    "attributes": [
+      {
+        "trait_type": "Human-Readable ID",
+        "value": "NGA-LAG-004"
+      },
+      {
+        "trait_type": "Deed of Assignment Path",
+        "value": "nigeria_demo_data/NGA-LAG-004_Deed_of_Assignment.txt"
+      },
+      {
+        "trait_type": "Public News API Path",
+        "value": "nigeria_demo_data/Nigerian_Gazette_Alerts.json"
+      },
+      {
+        "trait_type": "Land Registry File Path",
+        "value": "nigeria_demo_data/Nigerian_Land_Registry_Mock.csv"
+      },
+      {
+        "trait_type": "Registry Search Key",
+        "value": "C-OF-O-B6A6A3D3"
+      }
+    ],
+    "created_at": "2025-10-30T16:26:54.081432",
+    "data_source": "property_metadata"
+  },
+  {
+    "token_id": "NGA-LAG-005",
+    "name": "Vera AI Asset: NGA-LAG-005",
+    "description": "Tokenized asset representing property in Ikeja GRA, Lagos. Owned by Hope Adeyemi. Property is currently used as collateral for financial obligations.",
+    "attributes": [
+      {
+        "trait_type": "Human-Readable ID",
+        "value": "NGA-LAG-005"
+      },
+      {
+        "trait_type": "Deed of Assignment Path",
+        "value": "nigeria_demo_data/NGA-LAG-005_Deed_of_Assignment.txt"
+      },
+      {
+        "trait_type": "Public News API Path",
+        "value": "nigeria_demo_data/Nigerian_Gazette_Alerts.json"
+      },
+      {
+        "trait_type": "Land Registry File Path",
+        "value": "nigeria_demo_data/Nigerian_Land_Registry_Mock.csv"
+      },
+      {
+        "trait_type": "Registry Search Key",
+        "value": "C-OF-O-FBC8A82C"
+      }
+    ],
+    "created_at": "2025-10-30T16:26:54.081760",
+    "data_source": "property_metadata"
+  },
+  {
+    "token_id": "NGA-LAG-006",
+    "name": "Vera AI Asset: NGA-LAG-006",
+    "description": "Tokenized asset representing property in Ikoyi, Lagos. Owned by Joy Olawale. Property faces potential government acquisition or revocation.",
+    "attributes": [
+      {
+        "trait_type": "Human-Readable ID",
+        "value": "NGA-LAG-006"
+      },
+      {
+        "trait_type": "Deed of Assignment Path",
+        "value": "nigeria_demo_data/NGA-LAG-006_Deed_of_Assignment.txt"
+      },
+      {
+        "trait_type": "Public News API Path",
+        "value": "nigeria_demo_data/Nigerian_Gazette_Alerts.json"
+      },
+      {
+        "trait_type": "Land Registry File Path",
+        "value": "nigeria_demo_data/Nigerian_Land_Registry_Mock.csv"
+      },
+      {
+        "trait_type": "Registry Search Key",
+        "value": "C-OF-O-5CC0ECB8"
+      }
+    ],
+    "created_at": "2025-10-30T16:26:54.082087",
+    "data_source": "property_metadata"
+  }
+]

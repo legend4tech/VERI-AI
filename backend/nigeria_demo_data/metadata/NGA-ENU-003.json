@@ -1,0 +1,26 @@
+{
+  "name": "Vera AI Asset: NGA-ENU-003",
+  "description": "Tokenized asset representing property in New Haven, Enugu. Owned by Grace Balogun. Property has clean title with no identified risks or encumbrances.",
+  "attributes": [
+    {
+      "trait_type": "Human-Readable ID",
+      "value": "NGA-ENU-003"
+    },
+    {
+      "trait_type": "Deed of Assignment Path",
+      "value": "nigeria_demo_data/NGA-ENU-003_Deed_of_Assignment.txt"
+    },
+    {
+      "trait_type": "Public News API Path",
+      "value": "nigeria_demo_data/Nigerian_Gazette_Alerts.json"
+    },
+    {
+      "trait_type": "Land Registry File Path",
+      "value": "nigeria_demo_data/Nigerian_Land_Registry_Mock.csv"
+    },
+    {
+      "trait_type": "Registry Search Key",
+      "value": "C-OF-O-0BB0F9F2"
+    }
+  ]
+}
