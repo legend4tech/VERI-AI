@@ -1,6 +1,6 @@
 "use client"
 
-import { Dialog, DialogContent, DialogTitle } from "../ui/dialog"
+import { Dialog, DialogContent, DialogTitle } from "~~/components/ui/dialog"
 import { ArrowRight, UserPlus } from "lucide-react"
 import Link from "next/link"
 import { useRouter } from "next/navigation"
@@ -29,7 +29,7 @@ export function WelcomeModal({ open, onOpenChange }: WelcomeModalProps) {
         <div className="flex flex-col items-center text-center space-y-4 sm:space-y-5">
           {/* Title */}
           <div className="space-y-1">
-            <DialogTitle className="text-2xl sm:text-3xl font-bold text-gray-900">Welcome to BrickChain</DialogTitle>
+            <DialogTitle className="text-2xl sm:text-3xl font-bold text-gray-900">Welcome to reAI</DialogTitle>
             <p className="text-sm sm:text-base text-gray-600">Choose how you'd like to continue</p>
           </div>
 
@@ -41,7 +41,7 @@ export function WelcomeModal({ open, onOpenChange }: WelcomeModalProps) {
               className="w-full p-4 sm:p-5 border-2 border-gray-200 rounded-lg hover:border-emerald-500 hover:bg-emerald-50 transition-all group"
             >
               <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-emerald-500 flex items-center justify-center group-hover:bg-emerald-600 transition-colors flex-shrink-0">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-emerald-500 flex items-center justify-center group-hover:bg-emerald-600 transition-colors shrink-0">
                   <ArrowRight className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
                 </div>
                 <div className="text-left">
@@ -57,7 +57,7 @@ export function WelcomeModal({ open, onOpenChange }: WelcomeModalProps) {
               className="w-full p-4 sm:p-5 border-2 border-gray-200 rounded-lg hover:border-blue-500 hover:bg-blue-50 transition-all group"
             >
               <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-blue-500 flex items-center justify-center group-hover:bg-blue-600 transition-colors flex-shrink-0">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-blue-500 flex items-center justify-center group-hover:bg-blue-600 transition-colors shrink-0">
                   <UserPlus className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
                 </div>
                 <div className="text-left">

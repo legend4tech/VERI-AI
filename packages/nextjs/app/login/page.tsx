@@ -4,8 +4,8 @@ import { X } from "lucide-react"
 import { LoginForm } from "~~/components/auth/login-form"
 
 export const metadata: Metadata = {
-  title: "Login | BrickChain",
-  description: "Sign in to your BrickChain account",
+  title: "Login | reAI",
+  description: "Sign in to your reAI account",
 }
 
 export default function LoginPage() {
@@ -13,12 +13,15 @@ export default function LoginPage() {
     <div className="min-h-screen bg-white flex items-center justify-center p-4">
       <div className="w-full max-w-md">
         <div className="relative bg-white border border-gray-200 rounded-2xl p-8 shadow-sm">
-       
+          {/* Close button */}
+          <Link href="/" className="absolute top-4 right-4 p-2 text-gray-400 hover:text-gray-600 transition-colors">
+            <X className="w-5 h-5" />
+          </Link>
 
           {/* Header */}
           <div className="text-center mb-8">
             <h1 className="text-3xl font-bold text-gray-900 mb-2">Welcome Back</h1>
-            <p className="text-gray-600">Sign in to your BrickChain account</p>
+            <p className="text-gray-600">Sign in to your reAI account</p>
           </div>
 
           {/* Form */}
