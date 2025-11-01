@@ -11,6 +11,8 @@ import { Button } from "~~/components/ui/button"
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "~~/components/ui/form"
 import { Input } from "~~/components/ui/input"
 import { toast } from "sonner"
+import { registerUser } from "~~/app/actions/auth"
+import { signOut } from "next-auth/react"
 
 const investorSignupSchema = z.object({
   fullName: z.string().min(2, "Full name must be at least 2 characters"),
@@ -40,17 +42,32 @@ export function InvestorSignupForm() {
 
   async function onSubmit(data: InvestorSignupFormValues) {
     setIsLoading(true)
-    console.log("[v0] Investor signup form submitted:", data)
-    await new Promise((resolve) => setTimeout(resolve, 1500))
-    setIsLoading(false)
 
-    toast.success("Registration successful! Welcome to reAI", {
-      description: "Redirecting to your dashboard...",
+    await signOut({ redirect: false })
+
+    const result = await registerUser({
+      name: data.fullName,
+      email: data.email,
+      password: data.password,
+      role: "investor",
+      phone: data.phone,
+      nin: data.nin,
+    })
+
+    if (result.error) {
+      toast.error(result.error)
+      setIsLoading(false)
+      return
+    }
+
+    toast.success("Registration successful! Please login.", {
+      description: "Redirecting to login page...",
     })
 
     setTimeout(() => {
-      router.push("/dashboard/investor")
+      router.push("/login")
     }, 1000)
+    setIsLoading(false)
   }
 
   return (
