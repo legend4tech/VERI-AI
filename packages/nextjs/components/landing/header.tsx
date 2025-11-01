@@ -38,13 +38,7 @@ export function Header() {
             </nav>
 
             <div className="hidden gap-3 md:flex">
-              <Button
-                variant="outline"
-                size="sm"
-                className="border-emerald-600 text-emerald-600 hover:bg-emerald-600 hover:text-white transition-colors bg-transparent"
-              >
-                Connect Wallet
-              </Button>
+            
               <Button
                 size="sm"
                 className="bg-emerald-600 hover:bg-emerald-700 text-white transition-colors"
