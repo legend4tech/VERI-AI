@@ -1,0 +1,40 @@
+
+DEED OF ASSIGNMENT
+
+Property ID: NGA-LAG-006
+Certificate of Occupancy: C-OF-O-5CC0ECB8
+Date of Registration: 2013-02-12
+
+PROPERTY DETAILS:
+Plot Number: 150
+Block Number: 1
+Area: Ikoyi
+State: Lagos
+Status: Verified
+
+OWNERSHIP INFORMATION:
+Current Owner: Joy Olawale
+Registration Date: 2013-02-12
+
+PROPERTY DESCRIPTION:
+This deed of assignment covers the property located at Plot 150, 
+Block 1, Ikoyi, Lagos State.
+
+The property is registered under Certificate of Occupancy C-OF-O-5CC0ECB8 
+and is currently owned by Joy Olawale.
+
+
+GOVERNMENT NOTICE:
+This property may be subject to government acquisition or revocation proceedings.
+Official gazette notices should be checked before any transactions.
+
+REVOCATION RISK:
+- Property in area marked for government development
+- Potential compulsory acquisition proceedings
+- Compensation terms may apply
+
+
+DOCUMENT GENERATED: 2025-10-30 09:26:18
+RISK ASSESSMENT: Government Revocation
+
+This document is generated for testing purposes in the Vira Engine system.

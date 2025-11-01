@@ -1,0 +1,41 @@
+
+DEED OF ASSIGNMENT
+
+Property ID: NGA-ENU-002
+Certificate of Occupancy: C-OF-O-49B65A2C
+Date of Registration: 2012-02-28
+
+PROPERTY DETAILS:
+Plot Number: 9
+Block Number: 42
+Area: GRA
+State: Enugu
+Status: Verified
+
+OWNERSHIP INFORMATION:
+Current Owner: Esther Balogun
+Registration Date: 2012-02-28
+
+PROPERTY DESCRIPTION:
+This deed of assignment covers the property located at Plot 9, 
+Block 42, GRA, Enugu State.
+
+The property is registered under Certificate of Occupancy C-OF-O-49B65A2C 
+and is currently owned by Esther Balogun.
+
+
+LEGAL NOTICE:
+This property has been subject to competing ownership claims. Multiple parties have 
+presented documentation claiming rights to this property. Legal verification is 
+required before any transaction.
+
+DISPUTE DETAILS:
+- Multiple claimants have presented conflicting documentation
+- Court proceedings may be pending
+- Title verification strongly recommended
+
+
+DOCUMENT GENERATED: 2025-10-30 09:26:18
+RISK ASSESSMENT: Title Dispute
+
+This document is generated for testing purposes in the Vira Engine system.

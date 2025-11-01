@@ -1,0 +1,26 @@
+{
+  "name": "Vera AI Asset: NGA-LAG-003",
+  "description": "Tokenized asset representing property in Surulere, Lagos. Owned by Joshua Obi. Property has competing ownership claims and requires legal verification.",
+  "attributes": [
+    {
+      "trait_type": "Human-Readable ID",
+      "value": "NGA-LAG-003"
+    },
+    {
+      "trait_type": "Deed of Assignment Path",
+      "value": "nigeria_demo_data/NGA-LAG-003_Deed_of_Assignment.txt"
+    },
+    {
+      "trait_type": "Public News API Path",
+      "value": "nigeria_demo_data/Nigerian_Gazette_Alerts.json"
+    },
+    {
+      "trait_type": "Land Registry File Path",
+      "value": "nigeria_demo_data/Nigerian_Land_Registry_Mock.csv"
+    },
+    {
+      "trait_type": "Registry Search Key",
+      "value": "C-OF-O-2EA577B4"
+    }
+  ]
+}

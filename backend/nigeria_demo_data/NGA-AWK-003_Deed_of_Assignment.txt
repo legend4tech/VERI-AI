@@ -1,0 +1,40 @@
+
+DEED OF ASSIGNMENT
+
+Property ID: NGA-AWK-003
+Certificate of Occupancy: C-OF-O-E68FB428
+Date of Registration: 2021-04-04
+
+PROPERTY DETAILS:
+Plot Number: 59
+Block Number: 34
+Area: Onitsha GRA
+State: Anambra
+Status: Verified
+
+OWNERSHIP INFORMATION:
+Current Owner: Gloria Nnamani
+Registration Date: 2021-04-04
+
+PROPERTY DESCRIPTION:
+This deed of assignment covers the property located at Plot 59, 
+Block 34, Onitsha GRA, Anambra State.
+
+The property is registered under Certificate of Occupancy C-OF-O-E68FB428 
+and is currently owned by Gloria Nnamani.
+
+
+GOVERNMENT NOTICE:
+This property may be subject to government acquisition or revocation proceedings.
+Official gazette notices should be checked before any transactions.
+
+REVOCATION RISK:
+- Property in area marked for government development
+- Potential compulsory acquisition proceedings
+- Compensation terms may apply
+
+
+DOCUMENT GENERATED: 2025-10-30 09:26:18
+RISK ASSESSMENT: Government Revocation
+
+This document is generated for testing purposes in the Vira Engine system.
