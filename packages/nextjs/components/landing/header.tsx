@@ -68,13 +68,7 @@ export function Header() {
                 Contact
               </a>
               <div className="flex flex-col gap-2 pt-2">
-                <Button
-                  variant="outline"
-                  size="sm"
-                  className="w-full border-emerald-600 text-emerald-600 hover:bg-emerald-600 hover:text-white transition-colors bg-transparent"
-                >
-                  Connect Wallet
-                </Button>
+                
                 <Button
                   size="sm"
                   className="w-full bg-emerald-600 hover:bg-emerald-700 text-white transition-colors"
